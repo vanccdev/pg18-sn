@@ -1,8 +1,7 @@
 services:
   postgres:
     image: postgres:18
-    container_name: pg18
-    restart: always                # 🔥 se reinicia automáticamente al arrancar Docker
+    restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
