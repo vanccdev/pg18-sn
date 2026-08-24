@@ -9,10 +9,14 @@ services:
       POSTGRES_DB: bd_payments
 
     ports:
-      - "5432:5432"
+      - "5000:5432"
 
     volumes:
       - pgdata:/var/lib/postgresql
 
-volumes:
-  pgdata:
+    networks:
+      - dokploy-network
+      
+networks:
+  dokploy-network:
+    external: true
